@@ -1,0 +1,8 @@
+#!/bin/sh
+USER=cyril
+HOST=ponderings.xyz
+DIR=www/ponderings/
+
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+
+exit 0
